@@ -1,16 +1,8 @@
-import dynamic from 'next/dynamic';
-import { InfoWithCircle } from '@styled-icons/entypo/InfoWithCircle'
-
 import HomeTemplate from 'templates/Home';
-import Header from 'components/Header';
-import LinkWrapper from 'components/LinkWrapper';
-
-const Map = dynamic(() => import('components/Map'), {ssr: false});
 
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
       {/* <Map places={[
         {
           id: '1',
@@ -23,12 +15,6 @@ export default function Home() {
         }]} 
       /> */
       }
-
-      {/* <LinkWrapper href="/about">
-        <InfoWithCircle size={26} />
-      </LinkWrapper>
-      <Map /> */}
-
       <HomeTemplate />
     </>
   )

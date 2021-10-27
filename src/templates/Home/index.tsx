@@ -1,19 +1,39 @@
-// @styled-icons/boxicons-regular/MenuAltLeft
 import { MenuAltLeft } from '@styled-icons/boxicons-regular/MenuAltLeft';
+import Link from 'next/link';
 
-import LinkedinLogo from '../../../public/svg/linkedin.svg';
-import GithubLogo from '../../../public/svg/github.svg';
-import TwitterLogo from '../../../public/svg/twitter.svg';
-import InstagramLogo from '../../../public/svg/instagram.svg';
+import MenuBar from 'components/Menu';
+import LogoWrapper from 'components/Logos';
 import * as S from './styles';
 
 const HomeTemplate = () => {
+
+    const logos = [
+        {
+            name: 'Github',
+            url: 'https://github.com/AlainNgauthier',
+            fill: '#ffffff'
+        },
+        {
+            name: 'Linkedin',
+            url: 'https://www.linkedin.com/in/alaingauthier76/',
+            fill: '#ffffff'
+        },
+        {
+            name: 'Twitter',
+            url: 'https://twitter.com/alaingauthier76',
+            fill: '#ffffff'
+        },
+        {
+            name: 'Instagram',
+            url: 'https://github.com/AlainNgauthier',
+            fill: '#ffffff'
+        }
+    ]
+
     return (
         <S.Main>
-            <S.FirstLine>
-                <MenuAltLeft size={26} />
-                <div>MENU</div>
-            </S.FirstLine>
+            <MenuBar />
+            <div></div>
             <S.SecondLine>
                 <S.SecondLineSubtitle>
                 &lt; Hello, world! &#47;&gt; 
@@ -26,10 +46,15 @@ const HomeTemplate = () => {
                 </S.SecondLineRole>
             </S.SecondLine>
             <S.ThirdLine>
-                <GithubLogo fill="#ffffff" />
-                <LinkedinLogo fill="#ffffff" />
-                <TwitterLogo fill="#ffffff" />
-                <InstagramLogo fill="#ffffff" />
+                {logos.map((logo, index) => (
+                    <span key={index}>
+                        <Link href={logo.url}>
+                            <a>
+                                <LogoWrapper name={logo.name} fill="#ffffff" />
+                            </a>
+                        </Link>
+                    </span>
+                ))}
             </S.ThirdLine>
         </S.Main>
     )

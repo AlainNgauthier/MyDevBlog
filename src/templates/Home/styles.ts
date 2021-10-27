@@ -10,26 +10,26 @@ export const Main = styled.section`
     justify-content: space-between;
 `;
 
-export const FirstLine = styled.div`
-    // position: fixed;
-    z-index: 1100;
-    width: 130px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    font-size: var(--small);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: var(--white);
-    background: #000000;
+// export const FirstLine = styled.div`
+//     // position: fixed;
+//     z-index: 1100;
+//     width: 130px;
+//     height: 50px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 7px;
+//     font-size: var(--small);
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     letter-spacing: 5px;
+//     color: var(--white);
+//     background: #000000;
 
-    svg {
-        color: var(--highlight);
-    }
-`;
+//     svg {
+//         color: var(--highlight);
+//     }
+// `;
 
 export const SecondLine = styled.div`
     width: 100%;
@@ -75,5 +75,7 @@ export const ThirdLine = styled.div`
     justify-content: center;
     gap: 40px;
 `;
+
+//background: url() no repeat center center fixed
 
 

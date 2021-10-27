@@ -7,7 +7,7 @@ import * as S from './styles';
 const AboutTemplate = () => {
     return (
         <S.Main>
-            <LinkWrapper href="/">
+            <LinkWrapper href="/my-trips">
                 <CloseOutline size={26} />
             </LinkWrapper>
             <S.Title>

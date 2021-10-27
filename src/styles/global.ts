@@ -31,6 +31,7 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
         height: 100%;
         background: var(--background);
+        // background: url("/img/background-home.jpg") no repeat center center fixed;
         color: var(--white);
     }
 
