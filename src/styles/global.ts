@@ -8,9 +8,13 @@ const GlobalStyles = createGlobalStyle`
 
         --container: 100rem;
 
-        --small: 1.5rem;
-        --medium: 3rem;
+        --small: 1.6rem;
+        --medium: 2.7rem;
         --large: 5rem;
+        
+        --small-mobile: 1rem;
+        --medium-mobile: 2.1rem;
+        --large-mobile: 4.3rem;
     }
 
     * {
@@ -24,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     html, body, #__next {
+        width: 100%;
         height: 100%;
         background: var(--background);
         color: var(--white);

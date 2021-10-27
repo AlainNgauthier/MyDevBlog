@@ -1,8 +1,8 @@
-// import AboutTemplate from ''
+import AboutTemplate from 'templates/About';
 
 const About = () => {
     return (
-        <h1>About</h1>
+        <AboutTemplate />
     )
 };
 
