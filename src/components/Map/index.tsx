@@ -17,13 +17,20 @@ export type MapProps = {
     places?: Place[],
 }
 
-const Map = ({ places }: MapProps) => {
+export default function Map({ places }: MapProps) {
+    const router = useRouter();
+
     return (
         <S.MapWrapper>
             <MapContainer 
                 center={[0, 0]} 
-                zoom={3}
                 style={{ height: '100%', width: '100%'}}
+                zoom={3}
+                minZoom={3}
+                maxBounds={[
+                    [-180, 180],
+                    [180, -180]
+                ]}
             >
                 <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -34,16 +41,20 @@ const Map = ({ places }: MapProps) => {
                     const { latitude, longitude } = location;
 
                     return (
-                        <Marker key={`${id}`} position={[latitude, longitude]} title={name}>
-                            <Popup>
-                                Cidade: {`${slug}`}
-                            </Popup>
-                        </Marker>
-                    )
+                        <Marker 
+                            key={`${id}`} 
+                            position={[latitude, longitude]} 
+                            title={name}
+                            eventHandlers={{
+                                click: () => {
+                                    router.push(`/my-trips/${slug}`)
+                                }
+                            }}
+                        />)
                 })}
             </MapContainer>
         </S.MapWrapper>
     )
 };
 
-export default Map;
+

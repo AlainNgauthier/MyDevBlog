@@ -1,26 +1,27 @@
 import client from 'graphql/client';
 import { useRouter } from 'next/dist/client/router';
 
-import { GET_PAGES, GET_PAGE_BY_SLUG } from 'graphql/queries';
-import PageTemplate, { PageTemplateProps } from 'templates/Pages';
+import { GET_PLACES, GET_PLACE_BY_SLUG } from 'graphql/queries';
+import PlacesTemplate, { PlacesTemplateProps } from 'templates/Places';
 import { GetStaticProps } from 'next';
-import { GetPageBySlugQuery, GetPagesQuery } from 'graphql/generated/graphql';
+import { GetPlaceBySlugQuery, GetPlacesQuery } from 'graphql/generated/graphql';
+import React from 'react';
 
-export default function Page({ heading, body }: PageTemplateProps) {
+export default function Places({ place }: PlacesTemplateProps) {
 
     const router = useRouter();
 
     return (
         <>
-            <PageTemplate heading={heading} body={body} />           
+            <PlacesTemplate place={place} />           
         </>
     )
 };
 
 export async function getStaticPaths() {
-    const { pages } = await client.request<GetPagesQuery>(GET_PAGES); //optional variable "first"
+    const { places } = await client.request<GetPlacesQuery>(GET_PLACES); //optional variable "first"
 
-    const paths = pages.map(({ slug }) => ({
+    const paths = places.map(({ slug }) => ({
         params: { slug }
     }))
 
@@ -31,23 +32,18 @@ export async function getStaticPaths() {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const { page } = await client.request<GetPageBySlugQuery>(GET_PAGE_BY_SLUG, {
+    const { place } = await client.request<GetPlaceBySlugQuery>(GET_PLACE_BY_SLUG, {
         slug: `${params?.slug}`
     })
 
 
-    /* This is not needed bc the fallback of getStaticPath is false */
-    // if (!page) {
-    //     return { 
-    //         notFound: true,
-    //     }
-    // } 
-
     return {
         props: { 
-            heading: page?.heading,
-            body: page?.body?.html
-        },
-        revalidate: false
+            place
+        }
     }
 }
+
+// function GET_PLACES_BY_SLUG<T>(GET_PLACES_BY_SLUG: any, arg1: { slug: string; }): { page: any; } | PromiseLike<{ page: any; }> {
+//     throw new Error('Function not implemented.');
+// }
