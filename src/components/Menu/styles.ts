@@ -35,6 +35,10 @@ export const Body = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
+    // transition-property: height;
+    // transition-duration: 4s;
+    // transition-timing-function: linear;
+    // transition-delay: 1s;
 `;
 
 export const BodyItem = styled.div`

@@ -3,7 +3,13 @@ import HomeTemplate from 'templates/Home';
 export default function Home() {
   return (
     <>
-      {/* <Map places={[
+      <HomeTemplate />
+    </>
+  )
+};
+
+
+{/* <Map places={[
         {
           id: '1',
           name: 'Kinshasa',
@@ -14,8 +20,4 @@ export default function Home() {
           }
         }]} 
       /> */
-      }
-      <HomeTemplate />
-    </>
-  )
-};
+}

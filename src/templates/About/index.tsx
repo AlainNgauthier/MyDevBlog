@@ -11,7 +11,7 @@ const AboutTemplate = () => {
                 <CloseOutline size={26} />
             </LinkWrapper>
             <S.Title>
-                Sur Mes Routes
+                My Trips
             </S.Title>
             <S.Text>
                 <p>

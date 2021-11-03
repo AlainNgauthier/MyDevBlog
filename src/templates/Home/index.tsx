@@ -1,11 +1,10 @@
-import { MenuAltLeft } from '@styled-icons/boxicons-regular/MenuAltLeft';
 import Link from 'next/link';
 
 import MenuBar from 'components/Menu';
 import LogoWrapper from 'components/Logos';
 import * as S from './styles';
 
-const HomeTemplate = () => {
+const HomeTemplate : React.FC = () => {
 
     const logos = [
         {

@@ -15,7 +15,6 @@ const MyTrips = () => {
             </LinkWrapper>
             <Map />
         </>
-        // <AboutTemplate />
     )
 };
 

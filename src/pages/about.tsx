@@ -1,13 +1,23 @@
+import client from 'graphql/client';
+import { GET_ABOUT } from 'graphql/queries';
 import AboutTemplate from 'templates/About';
 
+// type AboutProps = {
 
-const About = () => {
-    return (
-        <>
-            <AboutTemplate />
-        </>
-    )
-        
+// }
+
+
+export default function About() {
+    return <AboutTemplate />
 }
 
-export default About;
+// export const getStaticProps = async () => {
+//     const { abouts } =   await client.request(GET_ABOUT);
+//     console.log(abouts);
+
+//     return {
+//         props: {
+//             data: abouts
+//         }
+//     }
+// }
