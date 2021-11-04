@@ -9,10 +9,10 @@ type LogoProps = {
 }
 
 const LogoWrapper: any = ({ name, fill }: LogoProps) => {
-    return (name === 'Twitter') ? <GithubLogo fill={fill} /> 
-        : (name === 'Instagram') ? <LinkedinLogo fill={fill} /> 
-        : (name === 'Linkedin') ? <TwitterLogo fill={fill} /> 
-        : (name === 'Github') ? <InstagramLogo fill={fill} />
+    return (name === 'Github') ? <GithubLogo fill={fill} /> 
+        : (name === 'Linkedin') ? <LinkedinLogo fill={fill} /> 
+        : (name === 'Twitter') ? <TwitterLogo fill={fill} /> 
+        : (name === 'Instagram') ? <InstagramLogo fill={fill} />
         : '';
 }
 
