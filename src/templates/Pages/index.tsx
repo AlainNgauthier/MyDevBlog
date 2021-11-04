@@ -12,9 +12,6 @@ export default function PageTemplate({ heading, body } : PageTemplateProps) {
 
     return (
         <S.Main>
-            {/* <LinkWrapper href="/my-trips">
-                <CloseOutline size={26} />
-            </LinkWrapper> */}
             <h1>
                 {heading}
             </h1>

@@ -7,14 +7,9 @@ export const Slider = styled.section`
     align-items: center;
 `;
 
-export const Images = styled.img`
-    width: 700px;
-    height: 500px;
-    border-radius: 10px;
-`;
-
 export const ImagesWrapper = styled.div`
-
+    transition-duration: 1s;
+    //transform: scale(1.05);
 `;
 
 export const ArrowLeft = styled.div`

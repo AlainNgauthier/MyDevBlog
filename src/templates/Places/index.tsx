@@ -8,7 +8,7 @@ export type ImageProps = {
     url: string
     height: number
     width: number
-}
+};
 
 export type PlacesTemplateProps = {
     place : {
@@ -19,10 +19,9 @@ export type PlacesTemplateProps = {
         }
         gallery: ImageProps[]
     }
-}
+};
 
 export default function PlacesTemplate({ place }: PlacesTemplateProps) {
-    console.log(place);
 
     return (
         <S.Wrapper>   
@@ -30,15 +29,12 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
                 <CloseOutline size={26} />
             </LinkWrapper>
             <S.Body>
-                <h1>{place.name}</h1>
-                <div dangerouslySetInnerHTML={{ __html: place.description.html }} />
-                {/*<S.Gallery>
-                    {place.gallery.map((image, index) => (
-                        <img key={index} src={image.url} alt={`imagens de ${place.name}`} />
-                    ))}
-                    </S.Gallery>*/}
+                <S.BodyTitle>{place.name}</S.BodyTitle>
+                <S.BodyDescription dangerouslySetInnerHTML={{ __html: place.description?.html }} />
+                <S.Gallery>
                     <Slider place={place}  />
+                </S.Gallery>
             </S.Body>
         </S.Wrapper>
     )
-}
+};

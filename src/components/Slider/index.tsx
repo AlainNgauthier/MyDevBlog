@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ArrowRightCircleFill, ArrowLeftCircleFill } from "@styled-icons/bootstrap";
 //import { ArrowLeftCircleFill } from "@styled-icons/bootstrap";
 
@@ -28,13 +29,13 @@ export default function Slider({ place }: PlacesTemplateProps) {
         <S.Slider>
             <S.ArrowLeft>
                 <ArrowLeftCircleFill 
-                    size={32}
+                    size={40}
                     onClick={prevSlide}
                 />
             </S.ArrowLeft>
             <S.ArrowRight>
                 <ArrowRightCircleFill 
-                    size={32} 
+                    size={40} 
                     onClick={nextSlide}
                 />
             </S.ArrowRight>
@@ -42,12 +43,16 @@ export default function Slider({ place }: PlacesTemplateProps) {
                 return (
                     <S.ImagesWrapper 
                         key={index}
-                        
                     >
                         {index === current && (
-                            <S.Images 
+                            <Image 
                                 src={image.url} 
-                                alt={`imagens de ${place.name}`} 
+                                alt={`imagens de ${place.name}`}
+                                width={700}
+                                height={500}
+                                quality={80}
+                                objectFit="cover"
+                                priority 
                             />
                         )}
                     </S.ImagesWrapper>
