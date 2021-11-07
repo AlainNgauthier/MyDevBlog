@@ -2,22 +2,37 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { MenuAltLeft } from '@styled-icons/boxicons-regular/MenuAltLeft';
 
-
 import * as S from './styles';
+
+let useClickOutside = (handler : any) => {
+    let domNode = useRef();
+
+    useEffect(() => {
+        let probHandler = (event : any) => {
+            if(domNode !== undefined && !domNode.current.contains(event.target)) {
+                handler();
+            }
+        };
+        
+        document.addEventListener("mousedown", probHandler);
+
+        return () => {
+            document.removeEventListener("mousedown", probHandler);
+        };    
+    },[]);
+
+    return domNode;
+}
 
 const MenuBar : React.FC = () => {
     const [isShowingDropdown, setIsShowingDropdown] = useState(false);
 
-    let menuRef = useRef();
-
-    //useEffect(() => {
-    //    document.addEventListener("mousedown", () => {
-    //       setIsShowingDropdown(false);
-    //    })
-    //});
+    let domNode = useClickOutside(() => {
+        setIsShowingDropdown(false);
+    })
 
     return (
-        <S.MenuWrapper >
+        <S.MenuWrapper ref={domNode} >
             <S.Header 
                 onClick={() => setIsShowingDropdown(!isShowingDropdown)}
             >

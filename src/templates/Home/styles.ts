@@ -8,6 +8,10 @@ export const Main = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    //@media (max-width: 768px) {
+
+    // }
 `;
 
 export const SecondLine = styled.div`
