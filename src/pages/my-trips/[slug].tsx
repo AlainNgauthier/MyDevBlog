@@ -11,6 +11,8 @@ export default function Places({ place }: PlacesTemplateProps) {
 
     const router = useRouter();
 
+    if (router.isFallback) return null;
+
     return (
         <>
             <PlacesTemplate place={place} />           
@@ -27,7 +29,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 };
 
@@ -38,6 +40,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 
     return {
+        revalidate: 60,
         props: { 
             place
         }

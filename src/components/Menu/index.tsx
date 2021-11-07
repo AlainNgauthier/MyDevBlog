@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { MenuAltLeft } from '@styled-icons/boxicons-regular/MenuAltLeft';
 
@@ -8,8 +8,16 @@ import * as S from './styles';
 const MenuBar : React.FC = () => {
     const [isShowingDropdown, setIsShowingDropdown] = useState(false);
 
+    let menuRef = useRef();
+
+    //useEffect(() => {
+    //    document.addEventListener("mousedown", () => {
+    //       setIsShowingDropdown(false);
+    //    })
+    //});
+
     return (
-        <S.MenuWrapper>
+        <S.MenuWrapper >
             <S.Header 
                 onClick={() => setIsShowingDropdown(!isShowingDropdown)}
             >

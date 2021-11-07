@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
 
 import MenuBar from 'components/Menu';
 import LogoWrapper from 'components/Logos';
@@ -30,32 +31,41 @@ const HomeTemplate : React.FC = () => {
     ]
 
     return (
-        <S.Main>
-            <MenuBar />
-            <div></div>
-            <S.SecondLine>
-                <S.SecondLineSubtitle>
-                &lt; Hello, world! &#47;&gt; 
-                </S.SecondLineSubtitle>
-                <S.SecondLineTitle>
-                    I'm Alain Gauthier Ndamwey
-                </S.SecondLineTitle>
-                <S.SecondLineRole>
-                    Frontend Engineer
-                </S.SecondLineRole>
-            </S.SecondLine>
-            <S.ThirdLine>
-                {logos.map((logo, index) => (
-                    <span key={index}>
-                        <Link href={logo.url}>
-                            <a>
-                                <LogoWrapper name={logo.name} fill="#ffffff" />
-                            </a>
-                        </Link>
-                    </span>
-                ))}
-            </S.ThirdLine>
-        </S.Main>
+        <>
+            <NextSeo 
+                title="My DevBlog" 
+                description="A project to share all I want about everything, especially about technologies"
+                canonical="https://my-dev-blog.alaingauthier.com.br" 
+            />
+            <S.Main>
+                <MenuBar />
+                <div></div>
+                <S.SecondLine>
+                    <S.SecondLineSubtitle>
+                    &lt; Hello, world! &#47;&gt; 
+                    </S.SecondLineSubtitle>
+                    <S.SecondLineTitle>
+                        <div>
+                            I'm Alain Gauthier Ndamwey
+                        </div>
+                    </S.SecondLineTitle>
+                    <S.SecondLineRole>
+                        Frontend Engineer
+                    </S.SecondLineRole>
+                </S.SecondLine>
+                <S.ThirdLine>
+                    {logos.map((logo, index) => (
+                        <span key={index}>
+                            <Link href={logo.url}>
+                                <a>
+                                    <LogoWrapper name={logo.name} fill="#ffffff" />
+                                </a>
+                            </Link>
+                        </span>
+                    ))}
+                </S.ThirdLine>
+            </S.Main>
+        </>
     )
 };
 

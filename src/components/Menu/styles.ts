@@ -47,14 +47,14 @@ export const BodyItem = styled.div`
     padding-left: 20px;
     display: flex;
     align-items: center;
-    cursor: pointer;
     font-size: var(--small);
 
     span {
         &:hover {
             color: var(--highlight);
             transform: translateX(15%);
-            transition: .3s all ease-in-out;
+            transition: .3s all ease;
+            cursor: pointer;
         }
     }
 

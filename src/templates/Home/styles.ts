@@ -10,27 +10,6 @@ export const Main = styled.section`
     justify-content: space-between;
 `;
 
-// export const FirstLine = styled.div`
-//     // position: fixed;
-//     z-index: 1100;
-//     width: 130px;
-//     height: 50px;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 7px;
-//     font-size: var(--small);
-//     font-weight: 700;
-//     text-transform: uppercase;
-//     letter-spacing: 5px;
-//     color: var(--white);
-//     background: #000000;
-
-//     svg {
-//         color: var(--highlight);
-//     }
-// `;
-
 export const SecondLine = styled.div`
     width: 100%;
     display: flex;
@@ -53,6 +32,11 @@ export const SecondLineTitle = styled.div`
     color: var(--white);
     font-size: var(--large);
     font-weight: 700;
+
+    @media (max-width: 768px) {
+        font-weight: 500;
+        font-size: var(--medium);
+    }
 `;
 
 export const SecondLineRole = styled.div`

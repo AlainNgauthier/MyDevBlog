@@ -2,18 +2,30 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     width: var(--container);
-    min-height: 100vh;
+    //min-height: 100vh;
     margin: auto;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media(max-width: 600px) {
+        //height: 100vh;
+        top: 30px;
+    }
 `;
 
 export const Body = styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
+
+    @media(max-width: 600px) {
+        height: 100%;
+    }
 `;
 
 export const BodyTitle = styled.h1`

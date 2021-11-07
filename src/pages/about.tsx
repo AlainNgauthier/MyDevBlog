@@ -1,23 +1,16 @@
-import client from 'graphql/client';
-import { GET_ABOUT } from 'graphql/queries';
+import { NextSeo } from 'next-seo';
+
 import AboutTemplate from 'templates/About';
 
-// type AboutProps = {
-
-// }
-
-
 export default function About() {
-    return <AboutTemplate />
-}
-
-// export const getStaticProps = async () => {
-//     const { abouts } =   await client.request(GET_ABOUT);
-//     console.log(abouts);
-
-//     return {
-//         props: {
-//             data: abouts
-//         }
-//     }
-// }
+    return (
+        <>
+            <NextSeo 
+                    title="My DevBlog - About my trips" 
+                    description="A project to share all I want about everything, especially about technologies"
+                    canonical="https://my-dev-blog.alaingauthier.com.br" 
+            />
+            <AboutTemplate />
+        </>
+    );
+};

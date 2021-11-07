@@ -15,13 +15,9 @@ const AboutTemplate = () => {
             </S.Title>
             <S.Text>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-                    deserunt mollit anim id est laborum.
+                    You find on this map some of the places I've ever been and lived in. <br/>
+                    Have fun clicking on the markers and finding out some facts about all 
+                    of these cities !
                 </p>
                 </S.Text>
         </S.Main>
