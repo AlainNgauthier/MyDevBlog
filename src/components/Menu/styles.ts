@@ -13,6 +13,7 @@ export const MenuWrapper = styled.div`
     font-weight: 700;
     color: var(--white);
     background: #000000;
+    box-shadow: -1px 1px 4px rgba(245, 248, 246, 0.5);
 
     svg {
         color: var(--highlight);
@@ -35,16 +36,12 @@ export const Body = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    // transition-property: height;
-    // transition-duration: 4s;
-    // transition-timing-function: linear;
-    // transition-delay: 1s;
 `;
 
 export const BodyItem = styled.div`
     width: 100%;
     height: 50px;
-    padding-left: 20px;
+    padding-left: 25px;
     display: flex;
     align-items: center;
     font-size: var(--small);

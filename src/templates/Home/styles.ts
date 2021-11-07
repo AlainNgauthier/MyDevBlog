@@ -22,6 +22,10 @@ export const SecondLine = styled.div`
     align-items: center;
     gap: 15px;
     text-align: center;
+
+    @media (max-width: 768px) {
+        margin-top: 20px;
+    }
 `;
 
 export const SecondLineSubtitle = styled.div`
@@ -30,6 +34,10 @@ export const SecondLineSubtitle = styled.div`
     text-transform: uppercase;
     letter-spacing: 5px;
     color: var(--highlight);
+
+    @media (max-width: 768px) {
+        font-size: var(--small);
+    }
 `;
 
 export const SecondLineTitle = styled.div`

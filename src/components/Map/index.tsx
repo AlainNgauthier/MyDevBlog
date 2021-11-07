@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, MapConsumer, Popup } from 'react-leaflet';
 import { useRouter } from 'next/dist/client/router';
 
 import * as S from './styles';
@@ -50,6 +50,18 @@ export default function Map({ places }: MapProps) {
                     [180, -180]
                 ]}
             >
+                <MapConsumer>
+                    {(map) => {
+                        const widthScreen = window.innerWidth || 
+                            document.documentElement.clientWidth || 
+                            document.body.clientWidth;
+
+                        if (widthScreen < 768) {
+                            map.setMinZoom(2);
+                        }
+                        return null;
+                    }}
+                </MapConsumer>
                 <CustomTileLayer />
                 {places?.map(({ id, name, slug, location}) => {
                     const { latitude, longitude } = location;

@@ -3,9 +3,14 @@ import { NextSeo } from 'next-seo';
 
 import MenuBar from 'components/Menu';
 import LogoWrapper from 'components/Logos';
+import useWindowSize from 'components/_hooks/resize';
 import * as S from './styles';
 
 const HomeTemplate : React.FC = () => {
+
+    const { width } = useWindowSize();
+
+    
 
     const logos = [
         {
@@ -42,12 +47,19 @@ const HomeTemplate : React.FC = () => {
                 <div></div>
                 <S.SecondLine>
                     <S.SecondLineSubtitle>
-                    &lt; Hello, world! &#47;&gt; 
+                    &lt;Hello, world! &#47;&gt; 
                     </S.SecondLineSubtitle>
                     <S.SecondLineTitle>
-                        <div>
-                            I'm Alain Gauthier Ndamwey
-                        </div>
+                        {width && width > 768 ? (
+                            <div>
+                                I'm Alain Gauthier Ndamwey
+                            </div>
+
+                        ) : (
+                            <div>
+                                Alain Gauthier Ndamwey
+                            </div>
+                        )}
                     </S.SecondLineTitle>
                     <S.SecondLineRole>
                         Frontend Engineer

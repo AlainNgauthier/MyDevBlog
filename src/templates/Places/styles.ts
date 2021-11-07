@@ -10,8 +10,7 @@ export const Wrapper = styled.div`
     justify-content: center;
 
     @media(max-width: 600px) {
-        //height: 100vh;
-        top: 30px;
+        top: 50px;
     }
 `;
 
@@ -24,12 +23,16 @@ export const Body = styled.div`
     gap: 30px;
 
     @media(max-width: 600px) {
-        height: 100%;
+        //height: 100%;
     }
 `;
 
 export const BodyTitle = styled.h1`
     font-size: var(--medium);
+
+    @media(max-width: 600px) {
+        //height: 100%;
+    }
 `;
 
 export const BodyDescription = styled.div`
@@ -41,6 +44,10 @@ export const BodyDescription = styled.div`
     p { 
         font-size: var(--small);
     }
+
+    @media(max-width: 600px) {
+        //height: 100%;
+    }
 `;
 
 export const Gallery = styled.div`
@@ -49,4 +56,8 @@ export const Gallery = styled.div`
     justify-content: center;
     overflow: hidden;
     border-radius: 10px;
+
+    @media(max-width: 600px) {
+        //height: 100%;
+    }
 `;

@@ -5,11 +5,11 @@ import { MenuAltLeft } from '@styled-icons/boxicons-regular/MenuAltLeft';
 import * as S from './styles';
 
 let useClickOutside = (handler : any) => {
-    let domNode = useRef();
+    let domNode = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         let probHandler = (event : any) => {
-            if(domNode !== undefined && !domNode.current.contains(event.target)) {
+            if(!domNode.current?.contains(event.target)) {
                 handler();
             }
         };
