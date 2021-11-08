@@ -17,7 +17,6 @@ export const Main = styled.section`
 export const Wrapper = styled.section`
     padding: 100px 0;
     width: var(--container);
-    //height: 500px;
     margin: auto;
     display: flex;
     flex-direction: column;
