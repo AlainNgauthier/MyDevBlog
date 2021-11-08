@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const MenuWrapper = styled.div`
     position: fixed;
-    top: 0;
+    top: 10px;
+    margin-left: 10px;
     z-index: 1110;
     width: 150px;
     display: flex;
@@ -13,10 +14,16 @@ export const MenuWrapper = styled.div`
     font-weight: 700;
     color: var(--white);
     background: #000000;
-    box-shadow: -1px 1px 4px rgba(245, 248, 246, 0.5);
+    border-radius: 10px;
+    border: 2px solid transparent;
 
     svg {
         color: var(--highlight);
+    }
+
+    &:hover {
+        box-shadow: -1px 1px 4px rgba(245, 248, 246, 0.5);
+        border: 2px solid var(--highlight);
     }
 `;
 

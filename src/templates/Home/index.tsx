@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo';
 
 import MenuBar from 'components/Menu';
 import LogoWrapper from 'components/Logos';
+import IntroductionSection from './IntroductionSection';
 import useWindowSize from 'components/_hooks/resize';
 import * as S from './styles';
 
@@ -77,6 +78,7 @@ const HomeTemplate : React.FC = () => {
                     ))}
                 </S.ThirdLine>
             </S.Main>
+            <IntroductionSection />
         </>
     )
 };

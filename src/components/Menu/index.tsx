@@ -19,7 +19,7 @@ let useClickOutside = (handler : any) => {
         return () => {
             document.removeEventListener("mousedown", probHandler);
         };    
-    },[]);
+    });
 
     return domNode;
 }
@@ -49,6 +49,11 @@ const MenuBar : React.FC = () => {
                     <Link href="/my-trips">
                         <S.BodyItem onClick={() => setIsShowingDropdown(!isShowingDropdown)}>
                                 <span>My Trips</span>
+                        </S.BodyItem>
+                    </Link>
+                    <Link href="/">
+                        <S.BodyItem onClick={() => setIsShowingDropdown(!isShowingDropdown)}>
+                                <span>Articles</span>
                         </S.BodyItem>
                     </Link>
                 </S.Body>

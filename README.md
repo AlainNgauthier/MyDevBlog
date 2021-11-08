@@ -1,13 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## MyBlogDev
 
-## Getting Started
+Hi every one! THis is the code source of my blog/portfolio.
 
-First, run the development server:
+### Stack
+TypeScript
+Next JS
+Styled-Components
+GraphqlCMS
+Jest
+React Testing Library
 
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
