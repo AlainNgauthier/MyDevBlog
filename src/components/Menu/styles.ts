@@ -22,8 +22,13 @@ export const MenuWrapper = styled.div`
     }
 
     &:hover {
+        transition: all 0.7s ease;
         box-shadow: -1px 1px 4px rgba(245, 248, 246, 0.5);
         border: 2px solid var(--highlight);
+    }
+
+    @media (max-width: 999px) {
+        width: 120px;
     }
 `;
 
@@ -37,6 +42,11 @@ export const Header = styled.div`
     text-transform: uppercase;
     letter-spacing: 5px;
     cursor: pointer;
+
+    @media (max-width: 999px) {
+        gap: 7px;
+        letter-spacing: 3px;
+    }
 `;
 
 export const Body = styled.div`
@@ -60,6 +70,10 @@ export const BodyItem = styled.div`
             transition: .3s all ease;
             cursor: pointer;
         }
+    }
+
+    @media (max-width: 999px) {
+        padding-left: 15px;
     }
 
 `;

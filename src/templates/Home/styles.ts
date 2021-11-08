@@ -2,16 +2,16 @@ import styled from 'styled-components';
 
 export const Main = styled.section`
     max-width: var(--container);
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     padding-bottom: var(--large);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    //@media (max-width: 768px) {
-
-    // }
+    @media (max-width: 999px) {
+        max-width: unset;
+    }
 `;
 
 export const SecondLine = styled.div`
@@ -42,6 +42,7 @@ export const SecondLineSubtitle = styled.div`
 
 export const SecondLineTitle = styled.div`
     color: var(--white);
+    font-family: 'Poppins', sans-serif;
     font-size: var(--large);
     font-weight: 700;
 

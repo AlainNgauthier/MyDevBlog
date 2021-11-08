@@ -43,42 +43,46 @@ const HomeTemplate : React.FC = () => {
                 description="A project to share all I want about everything, especially about technologies"
                 canonical="https://my-dev-blog.alaingauthier.com.br" 
             />
-            <S.Main>
-                <MenuBar />
-                <div></div>
-                <S.SecondLine>
-                    <S.SecondLineSubtitle>
-                    &lt;Hello, world! &#47;&gt; 
-                    </S.SecondLineSubtitle>
-                    <S.SecondLineTitle>
-                        {width && width > 768 ? (
-                            <div>
-                                I'm Alain Gauthier Ndamwey
-                            </div>
+            <section
+                style={{ 'display' : 'flex', 'flexDirection' : 'column' }}
+            >
+                <S.Main>
+                    <MenuBar />
+                    <div></div>
+                    <S.SecondLine>
+                        <S.SecondLineSubtitle>
+                        &lt;Hello, world! &#47;&gt; 
+                        </S.SecondLineSubtitle>
+                        <S.SecondLineTitle>
+                            {width && width > 768 ? (
+                                <div>
+                                    I'm Alain Gauthier Ndamwey
+                                </div>
 
-                        ) : (
-                            <div>
-                                Alain Gauthier Ndamwey
-                            </div>
-                        )}
-                    </S.SecondLineTitle>
-                    <S.SecondLineRole>
-                        Frontend Engineer
-                    </S.SecondLineRole>
-                </S.SecondLine>
-                <S.ThirdLine>
-                    {logos.map((logo, index) => (
-                        <span key={index}>
-                            <Link href={logo.url}>
-                                <a>
-                                    <LogoWrapper name={logo.name} fill="#ffffff" />
-                                </a>
-                            </Link>
-                        </span>
-                    ))}
-                </S.ThirdLine>
-            </S.Main>
-            <IntroductionSection />
+                            ) : (
+                                <div>
+                                    Alain Gauthier Ndamwey
+                                </div>
+                            )}
+                        </S.SecondLineTitle>
+                        <S.SecondLineRole>
+                            Frontend Engineer
+                        </S.SecondLineRole>
+                    </S.SecondLine>
+                    <S.ThirdLine>
+                        {logos.map((logo, index) => (
+                            <span key={index}>
+                                <Link href={logo.url}>
+                                    <a>
+                                        <LogoWrapper name={logo.name} fill="#ffffff" />
+                                    </a>
+                                </Link>
+                            </span>
+                        ))}
+                    </S.ThirdLine>
+                </S.Main>
+                <IntroductionSection />
+            </section>
         </>
     )
 };
