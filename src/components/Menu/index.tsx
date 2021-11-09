@@ -52,8 +52,11 @@ const MenuBar : React.FC = () => {
                         </S.BodyItem>
                     </Link>
                     <Link href="/">
-                        <S.BodyItem onClick={() => setIsShowingDropdown(!isShowingDropdown)}>
-                                <span>Articles</span>
+                        <S.BodyItem 
+                            onClick={() => setIsShowingDropdown(!isShowingDropdown)}
+                            style={{ 'display' : 'none' }}
+                        >
+                            <span>Articles</span>
                         </S.BodyItem>
                     </Link>
                 </S.Body>

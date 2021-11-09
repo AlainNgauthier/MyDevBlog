@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Main = styled.section`
+export const Main = styled.footer`
     width: 100%;
     color: #6e6e6e;
     display: flex;
@@ -24,7 +24,7 @@ export const MainWrapper = styled.section`
     }
 `;
 
-export const Item = styled.section`
+export const Item = styled.div`
     width: 250px;
     display: flex;
     flex-direction: column;

@@ -70,9 +70,6 @@ export const SecondLineRole = styled.div`
 export const ThirdLine = styled.div`
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
 `;
-
-//background: url() no repeat center center fixed
-
 

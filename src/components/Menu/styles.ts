@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MenuWrapper = styled.div`
+export const MenuWrapper = styled.nav`
     position: fixed;
     top: 10px;
     margin-left: 10px;
@@ -32,7 +32,7 @@ export const MenuWrapper = styled.div`
     }
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
     height: 50px;
     display: flex;
     gap: 10px;
@@ -49,7 +49,7 @@ export const Header = styled.div`
     }
 `;
 
-export const Body = styled.div`
+export const Body = styled.section`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,5 +75,4 @@ export const BodyItem = styled.div`
     @media (max-width: 999px) {
         padding-left: 15px;
     }
-
 `;
