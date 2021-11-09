@@ -25,7 +25,7 @@ export default function Introduction() {
                     </S.BodyProfile>
                     <S.BodyDescription>
                         <p>
-                            Currently, I'm a Computer Science student and work as an Intern Frontend Engineer 
+                            Currently, I'm a Computer Science student and work as an Frontend Software Engineer Intern
                             at iFood, foodtech company number one in Latin America. <br />
                             My goal is to build myself as a Specialist Front End Engineer.
                         </p>

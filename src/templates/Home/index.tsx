@@ -56,14 +56,14 @@ const HomeTemplate : React.FC = () => {
                         </S.SecondLineSubtitle>
                         <S.SecondLineTitle>
                             {width && width > 768 ? (
-                                <div>
+                                <h1>
                                     I'm Alain Gauthier Ndamwey
-                                </div>
+                                </h1>
 
                             ) : (
-                                <div>
+                                <h1>
                                     Alain Gauthier Ndamwey
-                                </div>
+                                </h1>
                             )}
                         </S.SecondLineTitle>
                         <S.SecondLineRole>

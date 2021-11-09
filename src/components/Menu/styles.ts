@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const MenuWrapper = styled.nav`
     position: fixed;
     top: 10px;
-    margin-left: 10px;
     z-index: 1110;
     width: 150px;
     display: flex;
@@ -29,6 +28,7 @@ export const MenuWrapper = styled.nav`
 
     @media (max-width: 999px) {
         width: 120px;
+        margin-left: 10px;
     }
 `;
 

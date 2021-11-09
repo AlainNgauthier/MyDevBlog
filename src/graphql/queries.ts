@@ -81,3 +81,26 @@ export const GET_PLACE_BY_SLUG = gql`
         }
     }
 `;
+
+export const GET_ARTICLES = gql`
+    query getArticles {
+        articles {
+            id
+            title
+            category
+        }
+    }
+`;
+
+export const GET_ARTICLE_BY_SLUG = gql`
+    query getArticleBySlug($slug: String) {
+        article(where: { slug: $slug }){
+            id
+            slug
+            name
+            body {
+                html
+            }
+        }
+    }
+`;
