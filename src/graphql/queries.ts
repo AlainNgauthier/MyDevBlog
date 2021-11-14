@@ -1,17 +1,5 @@
 import { gql } from 'graphql-request';
 
-export const GET_ABOUT = gql`
-    query getAbouts {
-        abouts {
-            id
-            heading
-            body {
-                html
-            }
-        }
-    }
-`;
-
 export const GET_PAGES = gql`
     query getPages($first: Int){
         pages(first: $first) {
@@ -86,7 +74,9 @@ export const GET_ARTICLES = gql`
     query getArticles {
         articles {
             id
+            slug
             title
+            description
             category
         }
     }
@@ -97,7 +87,9 @@ export const GET_ARTICLE_BY_SLUG = gql`
         article(where: { slug: $slug }){
             id
             slug
-            name
+            title
+            description
+            category
             body {
                 html
             }

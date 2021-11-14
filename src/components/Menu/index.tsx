@@ -42,21 +42,24 @@ const MenuBar : React.FC = () => {
             {isShowingDropdown && (
                 <S.Body>
                     <Link href="/">
-                        <S.BodyItem onClick={() => setIsShowingDropdown(!isShowingDropdown)}>
-                                <span>Home</span>
+                        <S.BodyItem 
+                            onClick={() => setIsShowingDropdown(!isShowingDropdown)}
+                        >
+                            <span>Home</span>
                         </S.BodyItem>
                     </Link>
                     <Link href="/my-trips">
-                        <S.BodyItem onClick={() => setIsShowingDropdown(!isShowingDropdown)}>
-                                <span>My Trips</span>
-                        </S.BodyItem>
-                    </Link>
-                    <Link href="/">
                         <S.BodyItem 
                             onClick={() => setIsShowingDropdown(!isShowingDropdown)}
-                            style={{ 'display' : 'none' }}
                         >
-                            <span>Articles</span>
+                            <span>My Trips</span>
+                        </S.BodyItem>
+                    </Link>
+                    <Link href="/articles">
+                        <S.BodyItem 
+                            onClick={() => setIsShowingDropdown(!isShowingDropdown)}
+                        >
+                            <span>Blog</span>
                         </S.BodyItem>
                     </Link>
                 </S.Body>

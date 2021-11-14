@@ -1,11 +1,11 @@
+import React from 'react';
 import client from 'graphql/client';
 import { useRouter } from 'next/dist/client/router';
 
 import { GET_PLACES, GET_PLACE_BY_SLUG } from 'graphql/queries';
 import PlacesTemplate, { PlacesTemplateProps } from 'templates/Places';
-import { GetStaticProps } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { GetPlaceBySlugQuery, GetPlacesQuery } from 'graphql/generated/graphql';
-import React from 'react';
 
 export default function Places({ place }: PlacesTemplateProps) {
 
@@ -20,7 +20,7 @@ export default function Places({ place }: PlacesTemplateProps) {
     )
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const { places } = await client.request<GetPlacesQuery>(GET_PLACES); //optional variable "first"
 
     const paths = places.map(({ slug }) => ({

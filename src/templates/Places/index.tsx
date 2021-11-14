@@ -25,11 +25,11 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
 
     return (
         <S.Wrapper>   
-                <LinkWrapper href="/my-trips">
-            <S.CloseIcon>
+            <LinkWrapper href="/my-trips">
+                <S.CloseIcon>
                     <CloseOutline size={26} />
-            </S.CloseIcon>
-                </LinkWrapper>
+                </S.CloseIcon>
+            </LinkWrapper>
             <S.Body>
                 <S.BodyTitle>{place.name}</S.BodyTitle>
                 <S.BodyDescription dangerouslySetInnerHTML={{ __html: place.description?.html }} />

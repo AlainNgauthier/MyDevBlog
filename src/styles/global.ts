@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
         --small-mobile: 1rem;
         --medium-mobile: 2.1rem;
         --large-mobile: 4.3rem;
+
+        --font-text: 'Poppins', sans-serif;
+
+        --color-footer: #6e6e6e;
     }
 
     * {
