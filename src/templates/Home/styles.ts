@@ -53,7 +53,7 @@ export const SecondLineTitle = styled.div`
 `;
 
 export const SecondLineRole = styled.div`
-    width: 280px;
+    width: 400px;
     height: 20px;
     display: flex;
     align-items: center;
@@ -64,6 +64,11 @@ export const SecondLineRole = styled.div`
     font-size: var(--small);
     border-right: 1px solid var(--white);
     border-left: 1px solid var(--white);
+
+    @media (max-width: 600px) {
+        width: 333px;
+        letter-spacing: 2px;
+    }
 `;
 
 

@@ -67,7 +67,7 @@ const HomeTemplate : React.FC = () => {
                             )}
                         </S.SecondLineTitle>
                         <S.SecondLineRole>
-                            Frontend Engineer
+                            Frontend Software Engineer
                         </S.SecondLineRole>
                     </S.SecondLine>
                     <S.ThirdLine>
