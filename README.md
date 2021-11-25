@@ -12,5 +12,5 @@ React Testing Library
 
 ### Learning
 
-The most challenging of this project has been the use of React Leaflet to manipulate and customize maps and to handle with types of the queries. It has been a very interesting and fun way to learn by doing.
+Manipulating and customizing maps was the most challenging of this project (fisrt experience with React Leaflet). It was a very interesting and fun way to learn by doing.
 
