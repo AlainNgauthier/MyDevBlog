@@ -15,8 +15,8 @@ const AboutTemplate = () => {
             </S.Title>
             <S.Text>
                 <p>
-                    You find on this map some of the places I've been and lived in. <br/>
-                    Have fun clicking on the markers and finding out some facts about all 
+                    Hey y'all! You find on this map some places I've been and lived in. <br/>
+                    Click on the differents markers and see some facts about all 
                     of these cities !
                 </p>
                 </S.Text>
