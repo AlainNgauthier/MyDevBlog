@@ -32,7 +32,7 @@ const HomeTemplate : React.FC = () => {
         },
         {
             name: 'Instagram',
-            url: 'https://github.com/AlainNgauthier',
+            url: 'https://www.instagram.com/4laingauthier/',
             fill: '#ffffff'
         }
     ]
