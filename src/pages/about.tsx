@@ -7,7 +7,7 @@ export default function About() {
         <>
             <NextSeo 
                     title="My DevBlog - About my trips" 
-                    description="A project to share all I want about everything, especially about technologies"
+                    description="A project to share what I'm learn about technology, especially about web development"
                     canonical="https://my-dev-blog.alaingauthier.com.br" 
             />
             <AboutTemplate />

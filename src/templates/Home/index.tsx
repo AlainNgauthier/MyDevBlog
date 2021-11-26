@@ -41,7 +41,7 @@ const HomeTemplate : React.FC = () => {
         <>
             <NextSeo 
                 title="My DevBlog" 
-                description="A project to share all I want about everything, especially about technologies"
+                description="A project to share what I'm learning about technology, especially about web development"
                 canonical="https://my-dev-blog.alaingauthier.com.br" 
             />
             <section

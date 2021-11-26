@@ -18,7 +18,7 @@ export default function MyTrips({ places }: MapProps) {
         <>
             <NextSeo 
                     title="My DevBlog - My Trips" 
-                    description="A project to share all I want about everything, especially about technologies"
+                    description="A project to share what I'm learning about technology, especially about web development"
                     canonical="https://my-dev-blog.alaingauthier.com.br" 
             />
             <LinkHome href="/">
