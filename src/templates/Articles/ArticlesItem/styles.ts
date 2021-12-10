@@ -12,9 +12,12 @@ export const Main = styled.section`
     }
 
     img {
+            margin-left: 100px;
+
             @media (max-width: 600px) {
                 max-width: 330px;
                 height: 110px;
+                margin-left: 0;
             }
     }
 

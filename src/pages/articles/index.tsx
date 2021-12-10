@@ -15,7 +15,6 @@ export default function ListArticles({ articles }: ArticleProps)  {
 
 export const getStaticProps = async () => {
     const { articles } = await client.request<GetArticlesQuery>(GET_ARTICLES);
-    console.log(articles);
 
     return {
         props: { 
