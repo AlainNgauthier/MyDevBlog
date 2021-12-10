@@ -78,6 +78,10 @@ export const GET_ARTICLES = gql`
             title
             description
             category
+            banner {
+                id
+                url
+            }
         }
     }
 `;

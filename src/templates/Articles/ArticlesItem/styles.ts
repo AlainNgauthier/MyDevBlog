@@ -55,6 +55,24 @@ export const BodyContent = styled.div`
     flex-direction: column;
     gap: 20px;
 
+    p {
+        code {
+            margin-left: 40px;
+            padding: 15px;
+            font-size: 15px;
+            background: var(--white);
+            color: var(--background);
+
+            @media (max-width: 600px){
+                margin-left: 10px;
+                padding: 0;
+                font-size: 12px;
+                background: var(--background);
+                color: var(--white);
+            }
+        }
+    }
+
     @media (max-width: 600px) {
         padding: 5px;
     }

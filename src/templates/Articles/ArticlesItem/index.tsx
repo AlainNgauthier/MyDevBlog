@@ -1,6 +1,7 @@
 import * as React from 'react';
-import * as S from './styles';
+import { NextSeo } from 'next-seo';
 
+import * as S from './styles';
 import LinkWrapper from 'components/LinkWrapper';
 import { CloseOutline } from '@styled-icons/evaicons-outline/CloseOutline';
 
@@ -19,6 +20,12 @@ export type ArticlesItemsProps = {
 
 export default function ArticlesItemsTemplate({ article }: ArticlesItemsProps) {
     return (
+        <>
+        <NextSeo 
+            title="My DevBlog" 
+            description="A project to share what I'm learning about technology, especially about web development"
+            canonical={`https://www.alaingauthier.dev/articles/${article.slug}`} 
+        />
         <S.Main>
             <S.Wrapper>
                 <section>
@@ -37,5 +44,5 @@ export default function ArticlesItemsTemplate({ article }: ArticlesItemsProps) {
                 </S.Body>
             </S.Wrapper>
         </S.Main>
-    );
+    </>);
 };

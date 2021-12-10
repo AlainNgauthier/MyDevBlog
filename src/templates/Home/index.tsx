@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 
+import * as S from './styles';
 import MenuBar from 'components/Menu';
 import LogoWrapper from 'components/Logos';
 import IntroductionSection from './IntroductionSection';
 import Footer from 'components/Footer';
 import useWindowSize from 'components/_hooks/resize';
-import * as S from './styles';
 
 const HomeTemplate : React.FC = () => {
 
@@ -42,7 +42,7 @@ const HomeTemplate : React.FC = () => {
             <NextSeo 
                 title="My DevBlog" 
                 description="A project to share what I'm learning about technology, especially about web development"
-                canonical="https://my-dev-blog.alaingauthier.com.br" 
+                canonical="https://www.alaingauthier.dev" 
             />
             <section
                 style={{ 'display' : 'flex', 'flexDirection' : 'column' }}

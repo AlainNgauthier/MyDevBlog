@@ -50,7 +50,7 @@ export default function Slider({ place }: PlacesTemplateProps) {
                                 alt={`imagens de ${place.name}`}
                                 width={700}
                                 height={500}
-                                quality={95}
+                                quality={100}
                                 objectFit="cover"
                                 priority 
                             />

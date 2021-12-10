@@ -31,6 +31,7 @@ export type Aggregate = {
 
 export type Article = Node & {
   __typename?: 'Article';
+  banner?: Maybe<Asset>;
   body: RichText;
   category: Scalars['String'];
   /** The time the document was created */
@@ -57,6 +58,11 @@ export type Article = Node & {
   updatedAt: Scalars['DateTime'];
   /** User that last updated this document */
   updatedBy?: Maybe<User>;
+};
+
+
+export type ArticleBannerArgs = {
+  locales?: Maybe<Array<Locale>>;
 };
 
 
@@ -117,6 +123,7 @@ export type ArticleConnection = {
 };
 
 export type ArticleCreateInput = {
+  banner?: Maybe<AssetCreateOneInlineInput>;
   body: Scalars['RichTextAST'];
   category: Scalars['String'];
   createdAt?: Maybe<Scalars['DateTime']>;
@@ -159,6 +166,7 @@ export type ArticleManyWhereInput = {
   OR?: Maybe<Array<ArticleWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: Maybe<Scalars['String']>;
+  banner?: Maybe<AssetWhereInput>;
   category?: Maybe<Scalars['String']>;
   /** All values containing the given string. */
   category_contains?: Maybe<Scalars['String']>;
@@ -327,6 +335,7 @@ export enum ArticleOrderByInput {
 }
 
 export type ArticleUpdateInput = {
+  banner?: Maybe<AssetUpdateOneInlineInput>;
   body?: Maybe<Scalars['RichTextAST']>;
   category?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
@@ -410,6 +419,7 @@ export type ArticleWhereInput = {
   OR?: Maybe<Array<ArticleWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: Maybe<Scalars['String']>;
+  banner?: Maybe<AssetWhereInput>;
   category?: Maybe<Scalars['String']>;
   /** All values containing the given string. */
   category_contains?: Maybe<Scalars['String']>;
@@ -568,6 +578,7 @@ export type ArticleWhereUniqueInput = {
 /** Asset system model */
 export type Asset = Node & {
   __typename?: 'Asset';
+  bannerArticle: Array<Article>;
   /** The time the document was created */
   createdAt: Scalars['DateTime'];
   /** User that created this document */
@@ -608,6 +619,19 @@ export type Asset = Node & {
   url: Scalars['String'];
   /** The file width */
   width?: Maybe<Scalars['Float']>;
+};
+
+
+/** Asset system model */
+export type AssetBannerArticleArgs = {
+  after?: Maybe<Scalars['String']>;
+  before?: Maybe<Scalars['String']>;
+  first?: Maybe<Scalars['Int']>;
+  last?: Maybe<Scalars['Int']>;
+  locales?: Maybe<Array<Locale>>;
+  orderBy?: Maybe<ArticleOrderByInput>;
+  skip?: Maybe<Scalars['Int']>;
+  where?: Maybe<ArticleWhereInput>;
 };
 
 
@@ -718,6 +742,7 @@ export type AssetConnection = {
 };
 
 export type AssetCreateInput = {
+  bannerArticle?: Maybe<ArticleCreateManyInlineInput>;
   createdAt?: Maybe<Scalars['DateTime']>;
   fileName: Scalars['String'];
   galleryPlace?: Maybe<PlaceCreateManyInlineInput>;
@@ -786,6 +811,9 @@ export type AssetManyWhereInput = {
   OR?: Maybe<Array<AssetWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: Maybe<Scalars['String']>;
+  bannerArticle_every?: Maybe<ArticleWhereInput>;
+  bannerArticle_none?: Maybe<ArticleWhereInput>;
+  bannerArticle_some?: Maybe<ArticleWhereInput>;
   createdAt?: Maybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: Maybe<Scalars['DateTime']>;
@@ -893,6 +921,7 @@ export type AssetTransformationInput = {
 };
 
 export type AssetUpdateInput = {
+  bannerArticle?: Maybe<ArticleUpdateManyInlineInput>;
   fileName?: Maybe<Scalars['String']>;
   galleryPlace?: Maybe<PlaceUpdateManyInlineInput>;
   handle?: Maybe<Scalars['String']>;
@@ -1032,6 +1061,9 @@ export type AssetWhereInput = {
   OR?: Maybe<Array<AssetWhereInput>>;
   /** Contains search across all appropriate fields. */
   _search?: Maybe<Scalars['String']>;
+  bannerArticle_every?: Maybe<ArticleWhereInput>;
+  bannerArticle_none?: Maybe<ArticleWhereInput>;
+  bannerArticle_some?: Maybe<ArticleWhereInput>;
   createdAt?: Maybe<Scalars['DateTime']>;
   /** All values greater than the given value. */
   createdAt_gt?: Maybe<Scalars['DateTime']>;
@@ -4867,4 +4899,4 @@ export type GetArticleBySlugQueryVariables = Exact<{
 }>;
 
 
-export type GetArticleBySlugQuery = { __typename?: 'Query', article?: { __typename?: 'Article', id: string, slug: string, title: string, description?: string | null | undefined, category: string, body: { __typename?: 'RichText', html: string } } | null | undefined };
+export type GetArticleBySlugQuery = { __typename?: 'Query', article?: { __typename?: 'Article', id: string, slug: string, title: string, description?: string | null | undefined, category: string, body: { __typename?: 'RichText', html: string }, banner?: { __typename?: 'Asset', id: string, url: string } | null | undefined } | null | undefined };

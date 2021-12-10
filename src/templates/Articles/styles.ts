@@ -36,6 +36,12 @@ export const TypographyTitle = styled.h2`
     font-size: 20px;
 `;
 
+export const Banner = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 10px;
+`;
+
 export const TypographyDescription = styled.p`
     margin-left: 15px;
     font-size: 16px;
