@@ -31,7 +31,7 @@ export default function ListArticlesTemplate({ articles }: ArticleProps) {
     return (
         <>
         <NextSeo 
-            title="My DevBlog" 
+            title="O Blog d'Alain" 
             description="A project to share what I'm learning about technology, especially about web development"
             canonical="https://www.alaingauthier.dev/articles" 
         />

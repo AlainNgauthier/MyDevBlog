@@ -17,7 +17,7 @@ export default function MyTrips({ places }: MapProps) {
     return (
         <>
             <NextSeo 
-                    title="My DevBlog - My Trips" 
+                    title="O Blog d'Alain - My Trips" 
                     description="A project to share what I'm learning about technology, especially about web development"
                     canonical="https://my-dev-blog.alaingauthier.com.br" 
             />
