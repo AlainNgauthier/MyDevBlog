@@ -25,12 +25,12 @@ export default function Introduction() {
                     </S.BodyProfile>
                     <S.BodyDescription>
                         <p>
-                            Currently, I'm a Computer Science student and work as an Frontend Software Engineer at iFood, the biggest foodtech company of Latin America. <br />
+                            Currently, I'm a Computer Science student and work as a Frontend Software Engineer at iFood, the largest foodtech company of Latin America. <br />
                             My goal is to build myself as a Specialist Front End Engineer.
                         </p>
                         <p>
                             Concerning of technologies I use, most of time I work with JavaScript, 
-                            Typescript, React JS, NextJS and GraphQL.
+                            Typescript, CSS-in-JS, React JS, Next.JS, GraphQL, Jest and React Testing Library.
                         </p>
                     </S.BodyDescription>
                 </S.Body>
