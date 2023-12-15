@@ -8,6 +8,7 @@ export const Main = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     @media (max-width: 999px) {
         max-width: unset;
     }
