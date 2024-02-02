@@ -6,10 +6,12 @@ Hi every one! This is the code source of alaingauthier.net
 - TypeScript
 - Next JS
 - Styled-Components
-- GraphQLCMS
-- Jest
-- React Testing Library
-- React Leaflet
+- Hygraph, old GraphCMS, the content management system,
+- Jest, the test runner
+- Graphql-request, a GraphQL client
+- React Testing Library to test react component
+- React Leaflet, a Public API
+- MapBox - MapBox Studio, a public API for gelocalization
 
 ## Learning
 

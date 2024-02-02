@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "16.0.0"
+    "node": "18.18.2"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider next start",
     "lint": "next lint",
     "test": "jest",
     "test:watch": "yarn test --watch",
@@ -50,7 +50,7 @@
     "@types/styled-components": "^5.1.15",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "babel-plugin-styled-components": "^1.13.3",
-    "eslint": "^8.55.0",
+    "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2",
     "jest": "^27.3.0",
     "jest-styled-components": "^7.0.5",
