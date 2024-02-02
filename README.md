@@ -21,9 +21,11 @@ Manipulating and customizing maps has been the most challenging of this project 
 
 ```
 yarn install
-yarn dev run
+yarn dev
 
 ```
+
+P.S. You'll need to create a .env.local file to store the different API keys
 
 ## Visit the site
 
