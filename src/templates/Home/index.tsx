@@ -12,8 +12,6 @@ const HomeTemplate : React.FC = () => {
 
     const { width } = useWindowSize();
 
-    
-
     const logos = [
         {
             name: 'Github',
@@ -39,10 +37,10 @@ const HomeTemplate : React.FC = () => {
 
     return (
         <>
-            <NextSeo 
-                title="O Blog d'Alain" 
+            <NextSeo
+                title="O Blog d'Alain"
                 description="A project to share what I'm learning about technology, especially about web development"
-                canonical="https://www.alaingauthier.dev" 
+                canonical="https://www.alaingauthier.net"
             />
             <section
                 style={{ 'display' : 'flex', 'flexDirection' : 'column' }}
@@ -52,18 +50,17 @@ const HomeTemplate : React.FC = () => {
                     <div></div>
                     <S.SecondLine>
                         <S.SecondLineSubtitle>
-                        &lt;Hello, world! &#47;&gt; 
+                        &lt;Hello, world! &#47;&gt;
                         </S.SecondLineSubtitle>
                         <S.SecondLineTitle>
                             {width && width > 768 ? (
                                 <h1>
-                                    I'm Alain Gauthier Ndamwey
+                                    I&#39;m Alain Gauthier Ndamwey
                                 </h1>
-
                             ) : (
-                                <h1>
-                                    Alain Gauthier Ndamwey
-                                </h1>
+                              <h1>
+                                  Alain Gauthier Ndamwey
+                              </h1>
                             )}
                         </S.SecondLineTitle>
                         <S.SecondLineRole>
@@ -71,8 +68,8 @@ const HomeTemplate : React.FC = () => {
                         </S.SecondLineRole>
                     </S.SecondLine>
                     <S.ThirdLine>
-                        {logos.map((logo, index) => (
-                            <span key={index}>
+                        {logos.map((logo, _idx) => (
+                            <span key={`logo-${_idx}`}>
                                 <Link href={logo.url}>
                                     <a>
                                         <LogoWrapper name={logo.name} fill="#ffffff" />

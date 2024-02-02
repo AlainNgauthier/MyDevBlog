@@ -12,7 +12,7 @@ export default function Page({ heading, body }: PageTemplateProps) {
 
     return (
         <>
-            <PageTemplate heading={heading} body={body} />           
+            <PageTemplate heading={heading} body={body} />
         </>
     )
 };
@@ -36,15 +36,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     })
 
 
-    /* This is not needed bc the fallback of getStaticPath is false */
-    // if (!page) {
-    //     return { 
-    //         notFound: true,
-    //     }
-    // } 
-
     return {
-        props: { 
+        props: {
             heading: page?.heading,
             body: page?.body?.html
         },
